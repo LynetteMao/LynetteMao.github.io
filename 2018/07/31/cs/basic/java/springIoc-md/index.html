@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>IOC容器 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close"/>
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+        <!-- Dropdown Menu -->
+         
+        <li>
+            <a class="sb-toggle-submenu">Tag<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                    <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
+                
+                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
+                
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall,问题解决</a></li>
+                
+                    <li><a href="/tags/6-828/" class="animsition-link">6.828</a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                  
+                <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
+                
+                <li><a href="/categories/operate/" class="animsition-link">operate<small>(3)</small></a></li>
+                
+                <li><a href="/categories/project/" class="animsition-link">project<small>(4)</small></a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu secondary">
+        
+        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+    </ul>
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+    <!-- ============================ Header & Logo bar =========================== -->
+
+    <div id="navigation" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <!-- Nav logo -->
+                <div class="logo">
+                    <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                    </a>
+                </div>
+                <!-- // Nav logo -->
+                <!-- Info-bar -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/" class="animsition-link">Hexo</a></li>
+                        <li class="nolink"><span>Always </span>Creative.</li>
+                        
+                        <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li class="nolink"><span>Welcome!</span></li>
+                    </ul>
+                </nav>
+                <!--// Info-bar -->
+            </div>
+            <!-- // .container -->
+            <div class="learnmore sb-toggle-right">More</div>
+            <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+            </button>
+        </div>
+        <!-- // .navbar-inner -->
+    </div>
+
+    <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-07-31T09:06:49.000Z" itemprop="datePublished">
+          2018-07-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/java/'>java</a>
+    
+    
+</span>
+                <h1>IOC容器</h1>
+            </div>
+        </div>
+    
+        
+
+   
+        
+
+
+        <div class="col-md-8 col-md-offset-2">
+      		<p>开始的项目是使用ssm结构，就涉及到了很多关于Spring的知识，但是一直都是在谷歌上查找零碎的资料，也就只知道大概怎么用，然而还是不理解其原理及实现。最近实习的时候，要我们开始学习SpringBoot，为了理解更为透彻，我就找了一本书《精通Spring 4.x企业应用开发实战》，不得不说还是看书这种更为体系的学习更适合我。以下就是学习IoC容器后的总结。<br><a id="more"></a></p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>没有理解反射机制，就很难理解IoC，万丈高楼平地起！</p>
+<h3 id="类装载器（ClassLoader）"><a href="#类装载器（ClassLoader）" class="headerlink" title="类装载器（ClassLoader）"></a>类装载器（ClassLoader）</h3><p>   这个涉及到将类装载到虚拟机上，为了防止黑客的攻击，JVM装载类的时候使用的是“双亲委派模型”，也就是说，当底层的ClassLoader要装载的类了，先查看自己的命名空间里有没有这个类。如果没有就去找到这个类，但是他不能直接装载，他要打个电话问一下他的上级，一个接一个的问上级（loader2问loader1,loader1问系统类加载器，系统类加载器问根类加载器），上级说他加载不了，loader1的ClassLoader找到了这个类，上级说我加载不了，你来加载吧，于是loader1<br>   加载Sample类，并返回一个引用给loader2。   </p>
+<blockquote>
+<p>“你不知道，说来话长， 我们之前出现过事故，有个黑客写了个类java.lang.String,  和我们老板手下有一个干活最卖力的员工名字一模一样，只是这个黑客类里边竟然有格式化硬盘的代码，我们的小兵Classloader 不明就里，就把这个黑客类给先装载了，也执行了， 最后的结果，唉，很惨的… “<br>   “那后来怎么办？”<br>   “后来我们老板就定下了规矩：他的骨干员工像String, ArrayList等只能由他自己的心腹去装载， 我听说老板的心腹都是分层级的，像传销一样， 每个都有上线， 最顶层的叫Bootstrap Classloader , 下一次级叫Extension Classloader， 现在开车的这位其实叫App Classloader，位于最底层，  咱这位Classloader 在装载一个类之前，一定要问一问这几位权利极高的大爷，请他们先装载，这几位爷装载不了，才由我们这些小兵来出马。“<br>   “这能避免黑客攻击？”<br>   “能啊！ 你想想， 那个黑客写了个攻击的java.lang.String,  我们在装载之前，肯定要请示Extension, Bootstrap这些大爷先来装载， 由于String是老板的核心员工，肯定会他们先装载啊， 这些大爷把String 直接就给我们了， 我们就不会装载黑客类了”     —-刘欣《码农翻身》</p>
+<ul>
+<li>注：如果报Java.lang.NoSuchMethodError的错，一般都是在类路径上放置了多个不同版本的的类包，正好加载的那个类包没有这个方法。</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><ul>
+<li><p>场景1:   </p>
+<ul>
+<li>问题：一个已经发布了可独立运行的程序（如tomcat），但是如果客户想加入想拓展功能，可以对外提供接口进行功能的拓展。拓展的功能用一个类实现接口来实现这个功能，但是这个类产生的对象无法被这个可独立运行的程序运行（因为要在此应用程序new出来才能，但是没有源代码，不能new）</li>
+<li>解决办法：在应用程序中对外提供接口的时候提供配置文件，应用程序读取配置文件即可。客户只要实现接口，并填写配置文件（包含类名）。</li>
+<li>原理： 根据配置文件里的文件名，找到这个文件，并拿到这个文件（只要拿到这个字节码文件就干什么都可以），如果相对指定名称的字节码文件进行加载并获取其中的内容并调用，就要用到了反射技术。</li>
+</ul>
+</li>
+<li><p>概念: 动态获取类中的信息，就是java反射，对类的解剖。</p>
+</li>
+<li>作用： <ul>
+<li>早期new对象，先根据被new的类的名称找寻该类的字节码文件，加载进内存，并创建该字节码文件的对象，并接着创捷该字节文件的对应的Person对象。</li>
+<li>现在通过反射机制，只需要把名字的接口暴漏出去，都可以进行实例。</li>
+</ul>
+</li>
+<li><p>主要反射类及实现<br>反射相关的类一般都在java.lang.relfect包里   </p>
+<ul>
+<li>获取Class对象   <pre><code class="java"><span class="keyword">public</span> <span class="keyword">static</span> Class&lt;?&gt; forName(String className) <span class="keyword">throws</span> ClassNotFoundException
+<span class="comment">//返回与带有给定字符串名的类或接口相关联的Class对象，相当于：</span>
+Class.forName(className, <span class="keyword">true</span>, currentLoader)
+<span class="comment">//其中 currentLoader 表示当前类的定义类加载器</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>创建实例</p>
+<ul>
+<li>使用Class对象的newInstance(),如果反射的类是空参，就可以直接用这个，class类里一定要有一个空构造函数。</li>
+<li>或者构造器getConstructor()</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="IoC的概念"><a href="#IoC的概念" class="headerlink" title="IoC的概念"></a>IoC的概念</h3><p>IoC(Inverse of Control) 控制翻转，是一种思想，</p>
+<h3 id="IoC在反射中的应用"><a href="#IoC在反射中的应用" class="headerlink" title="IoC在反射中的应用"></a>IoC在反射中的应用</h3><pre><code class="java">&lt;bean id="Foo" class="com.smart.Foo"&gt;&lt;/bean&gt;
+</code></pre>
+<p>在Spring里经常出现这样的配置，通过反射，Spring再通过这个配置文件进行对象的实例化。<br>Spring通过解析XML文件，获取其中的内容。   </p>
+<pre><code class="java"><span class="comment">//解析&lt;property .../&gt;元素的name属性得到该字符串值为“courseDao”</span>
+String nameStr = <span class="string">"courseDao"</span>;
+<span class="comment">//解析&lt;property .../&gt;元素的ref属性得到该字符串值为“courseDao”</span>
+String refStr = <span class="string">"courseDao"</span>;
+<span class="comment">//生成将要调用setter方法名</span>
+String setterName = <span class="string">"set"</span> + nameStr.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase()
++ nameStr.substring(<span class="number">1</span>);
+<span class="comment">//获取spring容器中名为refStr的Bean，该Bean将会作为传入参数</span>
+Object paramBean = container.get(refStr);
+<span class="comment">//获取setter方法的Method类，此处的cls是刚才反射代码得到的Class对象</span>
+Method setter = cls.getMethod(setterName, paramBean.getClass());
+<span class="comment">//调用invoke()方法，此处的obj是刚才反射代码得到的Object对象</span>
+setter.invoke(obj, paramBean); 
+</code></pre>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+
+
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/09/06/cs/project/artmall/artmall-springboot/" style="float: left;">
+        ← artmall:multi module sping boot搭建
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/07/29/cs/operate/git服务器搭建/">
+        搭建git服务器 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

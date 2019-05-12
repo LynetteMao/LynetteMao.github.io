@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>搭建git服务器 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close"/>
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+        <!-- Dropdown Menu -->
+         
+        <li>
+            <a class="sb-toggle-submenu">Tag<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                    <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
+                
+                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
+                
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall,问题解决</a></li>
+                
+                    <li><a href="/tags/6-828/" class="animsition-link">6.828</a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                  
+                <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
+                
+                <li><a href="/categories/operate/" class="animsition-link">operate<small>(3)</small></a></li>
+                
+                <li><a href="/categories/project/" class="animsition-link">project<small>(4)</small></a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu secondary">
+        
+        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+    </ul>
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+    <!-- ============================ Header & Logo bar =========================== -->
+
+    <div id="navigation" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <!-- Nav logo -->
+                <div class="logo">
+                    <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                    </a>
+                </div>
+                <!-- // Nav logo -->
+                <!-- Info-bar -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/" class="animsition-link">Hexo</a></li>
+                        <li class="nolink"><span>Always </span>Creative.</li>
+                        
+                        <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li class="nolink"><span>Welcome!</span></li>
+                    </ul>
+                </nav>
+                <!--// Info-bar -->
+            </div>
+            <!-- // .container -->
+            <div class="learnmore sb-toggle-right">More</div>
+            <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+            </button>
+        </div>
+        <!-- // .navbar-inner -->
+    </div>
+
+    <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-07-29T14:40:47.742Z" itemprop="datePublished">
+          2018-07-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/环境搭建/'>环境搭建</a>
+    
+    
+</span>
+                <h1>搭建git服务器</h1>
+            </div>
+        </div>
+    
+        
+
+   
+        
+
+
+        <div class="col-md-8 col-md-offset-2">
+      		<ul>
+<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4">搭建步骤</a><ul>
+<li><a href="#%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1">租云服务</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85mysql57">安装mysql5.7</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85ssh">安装<code>ssh</code></a></li>
+<li><a href="#%E5%AE%89%E8%A3%85git">安装<code>git</code></a></li>
+<li><a href="#%E5%AE%89%E8%A3%85gogs">安装<code>gogs</code></a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91">踩过的坑</a><ul>
+<li><a href="#mysql%E7%89%88%E6%9C%AC">mysql版本</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98">服务器端口问题</a></li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>一开始是使用github进行远程多人合作，不得不说作为最大的开源社区，在合作这一方面做的真的很好。但是因为接的项目老师是商业版的，无奈只能寻找私人仓库，国内的那几家免费私人仓库合作人数都有限制，就开始琢磨着自己搭建一个git服务器。通过收集资料，发现<code>gitlab</code>配置要求过于高，不过算是github的代替品吧。穷学生还是找自己能租得起的服务器能承受的起的，然后就发现了<code>gogs</code>，但是还没试过合作的功能怎么样。<br><a id="more"></a></p>
+<p><br></p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>阿里云（Centos7）</li>
+<li>gogs</li>
+<li>mysql5.7</li>
+<li>ssh</li>
+</ul>
+<p><br></p>
+<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><p><br></p>
+<h3 id="租云服务"><a href="#租云服务" class="headerlink" title="租云服务"></a>租云服务</h3><p>   这个就不细说了，我用的是阿里云，不过感觉限制好多（好多设置都不能直接通过命令行修改，还要去控制台），之前用的是digitalocean,用的就很爽了，就是速度会慢一点。</p>
+<p><br></p>
+<h3 id="安装mysql5-7"><a href="#安装mysql5-7" class="headerlink" title="安装mysql5.7"></a>安装mysql5.7</h3><p>   这个是我踩坑踩的最多的一个，记住版本还是安装mysql5.7的会省去很多麻烦<br>   进入mysql的官网，点击 <em>Yum Repository</em> ，点击 <em>A Quick Guide to Using the MySQL Yum Repository</em> 就有详细的教程了（发现真的官网的文档绝对的最详细），不过我还是记录一下我的步骤：</p>
+<ul>
+<li>下载安装包<br> 在官网是下好来，通过SFTP会话传输到服务器上</li>
+<li><p>安装rpm包</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> rpm -Uvh mysql80-community-release-el6-n.noarch.rpm</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看已安装的包</span><br><span class="line"><span class="meta">shell&gt;</span> yum repolist all | grep mysql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择要安装的包（就是因为忽略了这个，然后安装成了8.0）<br>enabled为1的包就是等会yum会安装的包，打开文件选择自己要安装的版本，吧enabled改为1，其他的改为0，就行了。</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vi  /etc/yum.repos.d/mysql-community.repo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># Enable to use MySQL 5.7</span><br><span class="line">[mysql57-community]</span><br><span class="line">name=MySQL 5.7 Community Server</span><br><span class="line">baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/</span><br><span class="line">enabled=1      </span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>##查看即将安装的包</span><br><span class="line"><span class="meta">shell&gt;</span> yum repolist enabled | grep mysql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开始安装、开启服务</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shell&gt; sudo yum install mysql-community-server</span><br><span class="line"></span><br><span class="line">shell&gt; sudo systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找、修改临时密码</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查看临时密码</span><br><span class="line"><span class="meta">shell&gt;</span> sudo grep 'temporary password' /var/log/mysqld.log</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>登录</span><br><span class="line"><span class="meta">shell&gt;</span> mysql -uroot -p</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>修改密码</span><br><span class="line"><span class="meta">mysql&gt;</span> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>修改密码的时候，简单的密码都不能用，因为policy有限制，除非密码有大小写还有字符，要使用简单密码就要降低police的值<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>如果要修改简单密码</span><br><span class="line"><span class="meta">mysql&gt;</span>  ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';</span><br><span class="line"></span><br><span class="line">ERROR 1819 (HY000): Your password does not satisfy the current policy requirements   </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看密码策略</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span> SHOW VARIABLES LIKE 'validate_password%';</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password_check_user_name    | OFF   |</span><br><span class="line">| validate_password_dictionary_file    |       |</span><br><span class="line">| validate_password_length             | 8     |</span><br><span class="line">| validate_password_mixed_case_count   | 1     |</span><br><span class="line">| validate_password_number_count       | 1     |</span><br><span class="line">| validate_password_policy             |MEDIUM |</span><br><span class="line">| validate_password_special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">7 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>修改密码策略</span><br><span class="line"><span class="meta">mysql&gt;</span> set global validate_password_policy=0;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span> SHOW VARIABLES LIKE 'validate_password%';</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password_check_user_name    | OFF   |</span><br><span class="line">| validate_password_dictionary_file    |       |</span><br><span class="line">| validate_password_length             | 8     |</span><br><span class="line">| validate_password_mixed_case_count   | 1     |</span><br><span class="line">| validate_password_number_count       | 1     |</span><br><span class="line">| validate_password_policy             | LOW   |</span><br><span class="line">| validate_password_special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">7 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span> set global validate_password_length=4;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span> SHOW VARIABLES LIKE 'validate_password%';</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password_check_user_name    | OFF   |</span><br><span class="line">| validate_password_dictionary_file    |       |</span><br><span class="line">| validate_password_length             | 4     |</span><br><span class="line">| validate_password_mixed_case_count   | 1     |</span><br><span class="line">| validate_password_number_count       | 1     |</span><br><span class="line">| validate_password_policy             | LOW   |</span><br><span class="line">| validate_password_special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">7 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>再修改密码</span><br><span class="line"><span class="meta">mysql&gt;</span> ALTER USER 'root'@'localhost' IDENTIFIED BY '12345678';</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.04 sec)</span><br></pre></td></tr></table></figure></p>
+<p>这样的话呢，mysql就算安装完成了！</p>
+<p><br></p>
+<h3 id="安装ssh"><a href="#安装ssh" class="headerlink" title="安装ssh"></a>安装<code>ssh</code></h3><p>centos默认安装了，查看有没有安装，并开启22端口即可<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>安装ssh（centos默认安装，并开启22端口号）</span><br><span class="line"><span class="meta">#</span>查看是否安装</span><br><span class="line">[root@izwz96ngzxfrp8l0los1suz ~]# rpm -qa | grep ssh</span><br><span class="line">openssh-clients-7.4p1-16.el7.x86_64</span><br><span class="line">openssh-server-7.4p1-16.el7.x86_64</span><br><span class="line">libssh2-1.4.3-10.el7_2.1.x86_64</span><br><span class="line">openssh-7.4p1-16.el7.x86_64</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>开启服务</span><br><span class="line">[root@izwz96ngzxfrp8l0los1suz ~]# service sshd start</span><br><span class="line">Redirecting to /bin/systemctl start sshd.service</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看端口号时否开启</span><br><span class="line">[root@izwz96ngzxfrp8l0los1suz ~]# netstat -ntpl |grep 22</span><br><span class="line">    tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      2990/sshd</span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装<code>git</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+<h3 id="安装gogs"><a href="#安装gogs" class="headerlink" title="安装gogs"></a>安装<code>gogs</code></h3><ul>
+<li><p>下载安装包，解压<br> 第一次安装的时候报错了，原因是下载的是32位版本的，在64位的机器上不能运行。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf gogs_0.11.43_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建系统用户</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>添加用户</span><br><span class="line">useradd git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>设置密码</span><br><span class="line">passwd git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数据准备(root)</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd gogs/scripts/</span><br><span class="line">mysql -u root -p &lt; mysql.sql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>建立数据库用户</span><br><span class="line">create user 'gogs'@'localhost' identified by 'gogs';</span><br><span class="line">grant all privileges on gogs.* to 'gogs'@'localhost';</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>开启远程连接（不确定）</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO 'gogs'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
+<p> 如果配置的时候一直提示数据库连接失败，一般就是没有开启远程连接，还有如果是8.0的，密码加密策略改了，所以连接不上。</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">   mysql&gt;</span> use mysql;</span><br><span class="line"></span><br><span class="line"><span class="meta">   #</span>表格上localhost表示只允许本地访问</span><br><span class="line"><span class="meta">   mysql&gt;</span> select host, user, authentication_string, plugin from user; </span><br><span class="line"><span class="meta">   mysql&gt;</span> GRANT ALL ON *.* TO 'gogs'@'%';</span><br><span class="line"><span class="meta">   mysql&gt;</span> flush privileges;</span><br><span class="line">   ```   </span><br><span class="line">* 要去阿里云控制台开放规则，放行端口，不然连接不上</span><br><span class="line">* 运行</span><br><span class="line">   ```shell</span><br><span class="line">   cd gogs</span><br><span class="line">   ./gogs web</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>   跑<code>./gogs web</code>的时候会显示日志，打开浏览器输入：<a href="http://服务器ip:3000" target="_blank" rel="noopener">http://服务器ip:3000</a>。<br>   根据网页信息进行配置即可</p>
+<p><br></p>
+<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><h3 id="mysql版本"><a href="#mysql版本" class="headerlink" title="mysql版本"></a>mysql版本</h3><ul>
+<li><p>mysql的安装方式错误</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql</span><br><span class="line">yum -y install mysql mysql-server mysql-devel</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>但是启动不了服务器</span><br><span class="line">systemctl start mysqld</span><br><span class="line">error reading information on service mysqld: No such file or directory</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>发现安装的是mariadb</span><br><span class="line">Installed:</span><br><span class="line">mariadb.x86_64 1:5.5.41-2.el7_0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一开始安装的是5.6，但是gogs要求是5.7以上，所以就只能卸载重新安装咯，卸载后重新安装可能会冲突，所以要卸载冲突项。错因：直接按照网上的教程，没仔细看什么安装包</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>卸载mysql 5.6</span><br><span class="line">yum remove mysql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>下载更高版本的rpm包</span><br><span class="line">rpm -Uvh mysql80-community-release-el6-n.noarch.rpm</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">    mysql-community-release conflicts with mysql57-community-release-el7-7.noarch</span><br><span class="line"><span class="meta">#</span>报错，然后就卸载了冲突项</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查找已经安装的包</span><br><span class="line">rpm -qa | grep mysql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>卸载</span><br><span class="line">rpm -e --nodeps mysql-community-release-el7-5.noarch</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>重新安装</span><br><span class="line">rpm -Uvh mysql80-community-release-el6-n.noarch.rpm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mysql8.0刚安装好，如果没有更改密码会报错，密码太简单了也会报错</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查看mysql版本</span><br><span class="line">[root@izwz96ngzxfrp8l0los1suz ~]# mysql -V</span><br><span class="line">mysql  Ver 8.0.11 for Linux on x86_64 (MySQL Community Server - GPL)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看初始密码</span><br><span class="line">vim /var/log/mysqld.log </span><br><span class="line">2018-07-14T09:13:37.318628Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.11) initializing of server in progress as process 2735</span><br><span class="line">2018-07-14T09:13:40.567571Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: MhU%*C-l:5oe</span><br><span class="line">2018-07-14T09:13:42.058117Z 0 [System] [MY-013170] [Server] /usr/sbin/mysqld (mysqld 8.0.11) initializing of server has completed</span><br><span class="line">2018-07-14T09:13:44.346383Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.11) starting as process 2782</span><br><span class="line">2018-07-14T09:13:45.016804Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.</span><br><span class="line">2018-07-14T09:13:45.062845Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.11'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server - GPL.</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>修改密码</span><br><span class="line"><span class="meta">#</span>不修改密码，随便输入什么语句都报错</span><br><span class="line"><span class="meta">mysql&gt;</span> SHOW DATABASES;ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>修改密码太简单，也报错</span><br><span class="line"><span class="meta">mysql&gt;</span>  ALTER USER 'root'@'localhost' IDENTIFIED BY '123456'</span><br><span class="line">    -&gt; ;</span><br><span class="line"></span><br><span class="line">ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>降低police的值</span><br><span class="line"><span class="meta">mysql&gt;</span> SET GLOBAL validate_password.policy=0;Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>再修改密码</span><br><span class="line"><span class="meta">mysql&gt;</span> ALTER USER 'root'@'localhost' IDENTIFIED BY '12345678';</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.04 sec)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mysql8.0密码加密策略和5.7不一样，在网页上对gogs进行配置的时候，怎么输入都报错，原因就是加密策略。<br> 解决办法：</p>
+<ul>
+<li>更改加密策略（试过了，但是失败了，最后在服务器上都登入不了mysql）</li>
+<li>卸载8.0，重新安装5.7   </li>
+<li>卸载如5.6，就不写了</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h3 id="服务器端口问题"><a href="#服务器端口问题" class="headerlink" title="服务器端口问题"></a>服务器端口问题</h3><p>  执行<code>./gogs web</code>后怎样都打不开网页，就觉得应该是端口问题，或者防火墙的问题</p>
+<ul>
+<li><p>查看所有打开的端口</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --list-ports</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>没有这个端口，就开启这个端口</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=3000/tcp --permanent</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新载入</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>但是还是不行，后来发现是阿里云开放端口是要去控制台添加规则（没有提示，很不人性化），在控制台加入了规则之后就可以访问了</p>
+</li>
+</ul>
+<p><br></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+
+
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/07/31/cs/basic/java/springIoc-md/" style="float: left;">
+        ← IOC容器
+    </a>
+    
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>artmall——authorization | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close"/>
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+        <!-- Dropdown Menu -->
+         
+        <li>
+            <a class="sb-toggle-submenu">Tag<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                    <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
+                
+                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
+                
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall,问题解决</a></li>
+                
+                    <li><a href="/tags/6-828/" class="animsition-link">6.828</a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                  
+                <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
+                
+                <li><a href="/categories/operate/" class="animsition-link">operate<small>(3)</small></a></li>
+                
+                <li><a href="/categories/project/" class="animsition-link">project<small>(4)</small></a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu secondary">
+        
+        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+    </ul>
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+    <!-- ============================ Header & Logo bar =========================== -->
+
+    <div id="navigation" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <!-- Nav logo -->
+                <div class="logo">
+                    <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                    </a>
+                </div>
+                <!-- // Nav logo -->
+                <!-- Info-bar -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/" class="animsition-link">Hexo</a></li>
+                        <li class="nolink"><span>Always </span>Creative.</li>
+                        
+                        <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li class="nolink"><span>Welcome!</span></li>
+                    </ul>
+                </nav>
+                <!--// Info-bar -->
+            </div>
+            <!-- // .container -->
+            <div class="learnmore sb-toggle-right">More</div>
+            <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+            </button>
+        </div>
+        <!-- // .navbar-inner -->
+    </div>
+
+    <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-09-25T07:02:20.000Z" itemprop="datePublished">
+          2018-09-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/artmall/'>artmall</a>
+    
+    
+</span>
+                <h1>artmall——authorization</h1>
+            </div>
+        </div>
+    
+        
+
+   
+        
+
+
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="shiro中Authorization基础知识"><a href="#shiro中Authorization基础知识" class="headerlink" title="shiro中Authorization基础知识"></a>shiro中Authorization基础知识</h2><p>授权，即权限访问控制。<br>我们通过角色来规定权限，将用户进行角色的分类<br>shiro提倡使用权限和明确为角色指定权限来代替将权限隐含与角色中的方法。    </p>
+<h3 id="基于资源的权限管理-Resource-Based-Access-Control"><a href="#基于资源的权限管理-Resource-Based-Access-Control" class="headerlink" title="基于资源的权限管理(Resource-Based Access Control)"></a>基于资源的权限管理(Resource-Based Access Control)</h3><p>以下的例子就是将权限隐含在角色中,对于每一个权限控制，就直接判断是否属于这个角色,但是如果又有一个角色可以访问这个权限，就需要找到这个代码段，在if后面加上。如此代码就会很难扩展。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (user.hasRole(<span class="string">"Project Manager"</span>) || user.hasRole(<span class="string">"Department Manager"</span>) ) &#123;</span><br><span class="line">    <span class="comment">//show the project report button</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//don't show the button</span></span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">以下就是Resource-Based Access Control,对于访问的资源判断这个user或者这个role是否含有这个权限。</span><br><span class="line"></span><br><span class="line">```java </span><br><span class="line"><span class="keyword">if</span> (user.isPermitted(<span class="string">"projectReport:view:12345"</span>)) &#123;</span><br><span class="line">    <span class="comment">//show the project report button</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//don't show the button</span></span><br><span class="line">&#125;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">### Realm</span><br><span class="line">Subject实际上是shiro的用户，Subject通过与角色或者权限关联来确定是否被允许执行程序内特定的动作(即是否有此权限)   </span><br><span class="line">Realm从数据库里取出数据，告诉shiro这个角色或者权限是否存在(所以数据库里面需要权限控制的表，即五张表的关系)    </span><br><span class="line"></span><br><span class="line">### 授权对象  </span><br><span class="line">&gt;在 Shiro 中执行授权可以有三种途径：   </span><br><span class="line">&gt; - 程序代码--你可以在你的 JAVA 代码中执行用类似于 <span class="keyword">if</span> 和 <span class="keyword">else</span> 的结构来执行权限检查。   </span><br><span class="line">&gt; - JDK 注解--你可以在你的 JAVA 方法上附加权限注解     </span><br><span class="line">&gt; - JSP/GSP 标签--你可以基于角色和权限控制 JSP 或 GSP 页面输出内容。   </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 权限控制的具体实现    </span><br><span class="line">通过以上的基础知识，我们知道，要实现权限控制，我们需要对资源进行控制   </span><br><span class="line">### 1. 建立五张表   </span><br><span class="line">### 2. 获取角色和权限   </span><br><span class="line">因为我们是使用jwt进行身份的验证，jwt里面也存储了用户的id，所以可以直接提取出jwt里面的id，去数据库里面查询用户的角色和权限，重写了`AuthorizingRealm`的`doGetAuthorizationInfo`方法   </span><br><span class="line">&gt;问题：在用户访问界面的时候要进行拦截，shiroFilter如何定义？在这里获取了role的用处只不过是赋予这个user一个role，但是没有起到权限控制的作用。   </span><br><span class="line">回答：通过permissions来控制，在拦截的时候调用此方法，来判断是否有权限   </span><br><span class="line"></span><br><span class="line">- 拦截器的自定义   </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">### 3. 代码实现   </span><br><span class="line">当一个请求发过来，先被Shiro的FilterChain进行拦截，如果有符合的url，就进入对应的拦截器，在拦截器里面执行`subject.login(token)`就会调用Realm中的`doGetAuthenticationInfo`和数据库中的数据进行匹配，验证   </span><br><span class="line">在拦截器中执行`suject.hasrole(<span class="string">"Admin"</span>)`或者`subject.isPermitted(<span class="string">"\admin\test"</span>)`就会调用Realm中的`doGetAuthorizationInfo`查找数据库，进行权限的匹配。    </span><br><span class="line">现在的思路，因为我们不使用注释来进行权限控制(因为我们的权限控制是动态的从数据库中查找)所以只要获取到请求的url,使用subject.isPermitted(请求的资源)来和数据库中的资源进行匹配，如果匹配成功，则允许访问，匹配失败，则反之。   </span><br><span class="line">- 自定义拦截链，因为是使用jwt进行登录，所以对所有请求进行拦截，进入JWTFilter()        </span><br><span class="line">```java 代码体现  </span><br><span class="line">    <span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShiroConfiguration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ShiroFilterFactoryBean <span class="title">shirFilter</span><span class="params">(SecurityManager securityManager)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"ShiroConfiguration.shirFilter()"</span>);</span><br><span class="line">        ShiroFilterFactoryBean shiroFilterFactoryBean = <span class="keyword">new</span> ShiroFilterFactoryBean();</span><br><span class="line">        shiroFilterFactoryBean.setSecurityManager(securityManager);</span><br><span class="line">        <span class="comment">//把自定义的filter集成到shiro配置里面，添加自定义拦截器</span></span><br><span class="line">        Map&lt;String,Filter&gt; filterMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        filterMap.put(<span class="string">"jwt"</span>, <span class="keyword">new</span> JWTFilter());</span><br><span class="line">        shiroFilterFactoryBean.setFilters(filterMap);</span><br><span class="line">        <span class="comment">//定义url规则</span></span><br><span class="line">        Map&lt;String,String&gt; filterRuleMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        filterRuleMap.put(<span class="string">"/**"</span>,<span class="string">"jwt"</span>);</span><br><span class="line">        filterRuleMap.put(<span class="string">"401"</span>,<span class="string">"anon"</span>);</span><br><span class="line">        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterRuleMap);</span><br><span class="line">        <span class="keyword">return</span> shiroFilterFactoryBean;</span><br><span class="line">    &#125;</span><br><span class="line">```     </span><br><span class="line">- 自定义拦截器     </span><br><span class="line"> 我们先来看一下官方默认的拦截器如何实现的，比如说`RolesAuthorizationFilter`通过重写`isAccessAllowed`，我们可以模仿官方的写法    </span><br><span class="line">```java</span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RolesAuthorizationFilter</span> <span class="keyword">extends</span> <span class="title">AuthorizationFilter</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RolesAuthorizationFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAccessAllowed</span><span class="params">(ServletRequest request, ServletResponse response, Object mappedValue)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Subject subject = <span class="keyword">this</span>.getSubject(request, response);</span><br><span class="line">        String[] rolesArray = (String[])((String[])mappedValue);</span><br><span class="line">        <span class="keyword">if</span> (rolesArray != <span class="keyword">null</span> &amp;&amp; rolesArray.length != <span class="number">0</span>) &#123;</span><br><span class="line">            Set&lt;String&gt; roles = CollectionUtils.asSet(rolesArray);</span><br><span class="line">            <span class="keyword">return</span> subject.hasAllRoles(roles);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br><span class="line">```    </span><br><span class="line">下面是我的具体实现 </span><br><span class="line">```java   </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 判断用户是否想要登入。</span></span><br><span class="line"><span class="comment">     * 拦截ajax请求，判断shi</span></span><br><span class="line"><span class="comment">     * 检测header里面是否包含Authorization字段即可</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">isLoginAttempt</span><span class="params">(ServletRequest request, ServletResponse response)</span> </span>&#123;</span><br><span class="line">        HttpServletRequest req = (HttpServletRequest) request;</span><br><span class="line">        String authorization = req.getHeader(<span class="string">"Authorization"</span>);</span><br><span class="line">        <span class="keyword">return</span> authorization != <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 执行登录</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">executeLogin</span><span class="params">(ServletRequest request, ServletResponse response)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        HttpServletRequest httpServletRequest = (HttpServletRequest) request;</span><br><span class="line">        <span class="comment">//获取token</span></span><br><span class="line">        String authorization = httpServletRequest.getHeader(<span class="string">"Authorization"</span>);</span><br><span class="line">        JWTToken token = <span class="keyword">new</span> JWTToken(authorization);</span><br><span class="line">        <span class="comment">// 提交给realm进行登入，如果错误他会抛出异常并被捕获</span></span><br><span class="line">        getSubject(request, response).login(token);</span><br><span class="line">        <span class="comment">// 如果没有抛出异常则代表登入成功，返回true</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;   </span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这一段是重点，在前面的filter拦截下后，实例了JWTFilter，就会调用此方法</span></span><br><span class="line"><span class="comment">     * 来判断是否可以通过。mapppedValue在我调试的时候是null，源码调试放在后面说下    </span></span><br><span class="line"><span class="comment">     **/</span></span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">isAccessAllowed</span><span class="params">(ServletRequest request, ServletResponse response, Object mappedValue)</span> </span>&#123;</span><br><span class="line">        LOGGER.debug(<span class="string">"拦截开始"</span>);</span><br><span class="line">        <span class="keyword">if</span> (isLoginAttempt(request, response)) &#123;</span><br><span class="line">            <span class="comment">//执行登录，看token是否有效</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                executeLogin(request, response);</span><br><span class="line">                flag = <span class="number">1</span>;    <span class="comment">//有效则使flag为1；</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;  <span class="comment">//token如果不匹配，则返回false，执行onAccessDenied对访问拒绝进行处理</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//获取当前subject</span></span><br><span class="line">            Subject subject = <span class="keyword">this</span>.getSubject(request, response);</span><br><span class="line">            <span class="comment">//获取到请求的url</span></span><br><span class="line">            HttpServletRequest httpServletRequest = (HttpServletRequest) request;</span><br><span class="line">            String perm = httpServletRequest.getRequestURI();</span><br><span class="line">            <span class="comment">//对获取到的url，使用isPermitted(url)来调用realm中的doGetAuthorizationInfo,查找数据库看是否具有此权限</span></span><br><span class="line">            <span class="keyword">if</span> (perm != <span class="keyword">null</span> &amp;&amp; perm.length()&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (subject.isPermitted(perm)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>; <span class="comment">//执行onAccessDenied对拒绝访问进行处理;</span></span><br><span class="line">    &#125;   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 对返回的false进行处理</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> request</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">onAccessDenied</span><span class="params">(ServletRequest request, ServletResponse response)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"token错误"</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"没有此权限"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">- 权限和身份的验证  </span><br><span class="line">  这个就要和数据库打交道，所以自然是配置realm，之前的博客里说了，我是使用了多realm    </span><br><span class="line">  但是每一次验证会把所有的realm都验证一遍，之前设置了只要通过一个就算是通过    </span><br><span class="line">  权限的验证统一使用token进行验证，所有除了JWTRealm中写了`doGetAuthorizationInfo`，其他的都返回<span class="keyword">null</span>,关于登录的验证就请参照前面的博客，这里就只放出权限的验证     </span><br><span class="line">  ```java   </span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 通过token获取到id，然后获取到角色和权限</span></span><br><span class="line"><span class="comment">     *因为我们是使用jwt进行身份的验证，jwt里面也存储了用户的id   </span></span><br><span class="line"><span class="comment">     *所以可以直接提取出jwt里面的id，去数据库里面查询用户的角色和权限   </span></span><br><span class="line"><span class="comment">     *重写了`AuthorizingRealm`的`doGetAuthorizationInfo`方法   </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> principalCollection</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> AuthorizationInfo <span class="title">doGetAuthorizationInfo</span><span class="params">(PrincipalCollection principalCollection)</span> </span>&#123;</span><br><span class="line">        String token = (String) principalCollection.getPrimaryPrincipal();</span><br><span class="line">        Long userId = JWTUtil.getUserNo(token);</span><br><span class="line">        SimpleAuthorizationInfo simpleAuthorizationInfo = <span class="keyword">new</span> SimpleAuthorizationInfo();</span><br><span class="line">        simpleAuthorizationInfo.setRoles(userService.getRoles(userId));</span><br><span class="line">        simpleAuthorizationInfo.setStringPermissions(userService.getPermissions(userId));</span><br><span class="line">        <span class="keyword">return</span> simpleAuthorizationInfo;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>还存在的问题:   </p>
+<ul>
+<li>只做到了抛出异常，但是不知道在哪里对异常进行捕获，然后返回规定的响应码    </li>
+</ul>
+<h2 id="源码调试与分析"><a href="#源码调试与分析" class="headerlink" title="源码调试与分析"></a>源码调试与分析</h2><h3 id="1-FilterChain加载顺序"><a href="#1-FilterChain加载顺序" class="headerlink" title="1. FilterChain加载顺序"></a>1. FilterChain加载顺序</h3><blockquote>
+<p>Shiro对Servlet容器的FilterChain进行了代理，即ShiroFilter在继续Servlet容器的Filter链的执行之前，通过ProxiedFilterChain对Servlet容器的FilterChain进行了代理；即先走Shiro自己的Filter体系，然后才会委托给Servlet容器的FilterChain进行Servlet容器级别的Filter链执行；Shiro的ProxiedFilterChain执行流程：1、先执行Shiro自己的Filter链；2、再执行Servlet容器的Filter链（即原始的Filter）。<br>login和show的界面是任何用户都可以访问的   </p>
+<pre><code class="java">Map&lt;String,String&gt; filterRuleMap = <span class="keyword">new</span> HashMap&lt;&gt;();
+filterRuleMap.put(<span class="string">"/*/login"</span>,<span class="string">"anon"</span>);
+filterRuleMap.put(<span class="string">"/show"</span>,<span class="string">"anon"</span>);
+filterRuleMap.put(<span class="string">"/**"</span>,<span class="string">"jwt"</span>);
+filterRuleMap.put(<span class="string">"401"</span>,<span class="string">"anon"</span>);
+shiroFilterFactoryBean.setFilterChainDefinitionMap(filterRuleMap);
+<span class="keyword">return</span> shiroFilterFactoryBean;
+</code></pre>
+</blockquote>
+<p>对<code>shiroFilterFactoryBean</code>加断点，查看filterRuleMap的顺序<br> <img src="authorization/shiroFilterFactoryBean.png" alt="1"></p>
+<h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><p>过滤器是一种代码重用技术，可以改变HTTP请求的内容，相应，及header信息。<br>当容器接收到传入的请求时，它将获取列表中的第一个过滤器并调用doFilter方法，传入ServletRequest 和 ServletResponse，和一个它将使用的FilterChain对象的引用。 </p>
+<p>参考:<br><a href="http://jinnianshilongnian.iteye.com/blog/2025656" target="_blank" rel="noopener">http://jinnianshilongnian.iteye.com/blog/2025656</a><br><a href="http://www.hillfly.com/2017/179.html/comment-page-1" target="_blank" rel="noopener">http://www.hillfly.com/2017/179.html/comment-page-1</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+
+
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/10/15/cs/operate/6.828/6.828-环境搭建/" style="float: left;">
+        ← 6.828环境准备——linux科学上网
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/09/06/cs/project/artmall/artmall-shiro/">
+        artmall:spingboot整合shiro-基本登录实现 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
