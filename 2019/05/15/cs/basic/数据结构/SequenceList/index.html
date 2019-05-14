@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>顺序表 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close"/>
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+        <!-- Dropdown Menu -->
+         
+        <li>
+            <a class="sb-toggle-submenu">Tag<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                    <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
+                
+                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
+                
+                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                
+                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
+                
+                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                  
+                <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
+                
+                <li><a href="/categories/operate/" class="animsition-link">operate<small>(3)</small></a></li>
+                
+                <li><a href="/categories/project/" class="animsition-link">project<small>(4)</small></a></li>
+                
+                <li><a href="/categories/基础知识/" class="animsition-link">基础知识<small>(1)</small></a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu secondary">
+        
+        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+    </ul>
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+    <!-- ============================ Header & Logo bar =========================== -->
+
+    <div id="navigation" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <!-- Nav logo -->
+                <div class="logo">
+                    <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                    </a>
+                </div>
+                <!-- // Nav logo -->
+                <!-- Info-bar -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/" class="animsition-link">Hexo</a></li>
+                        <li class="nolink"><span>Always </span>Creative.</li>
+                        
+                        <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li class="nolink"><span>Welcome!</span></li>
+                    </ul>
+                </nav>
+                <!--// Info-bar -->
+            </div>
+            <!-- // .container -->
+            <div class="learnmore sb-toggle-right">More</div>
+            <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+            </button>
+        </div>
+        <!-- // .navbar-inner -->
+    </div>
+
+    <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-05-14T16:00:00.000Z" itemprop="datePublished">
+          2019-05-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/数据结构/'>数据结构</a>
+    
+    
+</span>
+                <h1>顺序表</h1>
+            </div>
+        </div>
+    
+        
+
+   
+        
+        <div id="toc" class="toc-article">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、C语言基础"><span class="toc-text">一、C语言基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-指针"><span class="toc-text">1. 指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-存储方式"><span class="toc-text">1.1 存储方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-指针存储方式"><span class="toc-text">1.2 指针存储方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-amp-和"><span class="toc-text">1.3 &amp;和*</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-结构"><span class="toc-text">2. 结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-结构声明与定义"><span class="toc-text">2.1 结构声明与定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-结构的表示方式"><span class="toc-text">2.2 结构的表示方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-malloc-和free"><span class="toc-text">3. malloc()和free()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-三种表示数组的方法"><span class="toc-text">4.三种表示数组的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、顺序表"><span class="toc-text">二、顺序表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义数据结构"><span class="toc-text">定义数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入"><span class="toc-text">插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除"><span class="toc-text">删除</span></a></li></ol></li></ol>
+        </div>
+        
+
+
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="一、C语言基础"><a href="#一、C语言基础" class="headerlink" title="一、C语言基础"></a>一、C语言基础</h1><h2 id="1-指针"><a href="#1-指针" class="headerlink" title="1. 指针"></a>1. 指针</h2><h3 id="1-1-存储方式"><a href="#1-1-存储方式" class="headerlink" title="1.1 存储方式"></a>1.1 存储方式</h3><p>在内存中数据由低位到高位进行存储，那么CPU如何对数据进行存取？<br>每一个字节的存储到主存中，都是有一个地址的。<br>定义不同的类型就会分配不同的存储空间，int类型分配4个字节，char类型分配一个字节。<br>计算机的存储方式是两个地址相加而成的，因为计算机中的物理地址为20位，寄存器存放为16位，要用16位的寄存器来表示20位的物理地址，就通过分段的方式，用两个寄存器，其中一个表示段的首地址，将首地址*16(向左移动四位)就可以表示为20位，然后另一个寄存器表示段内的偏移地址，偏移量为从0到2^16.所以数组的开头为0，而不是1，是为了更好的表示偏移量。</p>
+<h3 id="1-2-指针存储方式"><a href="#1-2-指针存储方式" class="headerlink" title="1.2 指针存储方式"></a>1.2 指针存储方式</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;<span class="comment">//分配了4个字节的存储空间</span></span><br><span class="line"><span class="keyword">int</span> *p;<span class="comment">//p为指向int类型的指针</span></span><br><span class="line">p=&amp;a;<span class="comment">//p存储了a的首地址，也即p指向了a</span></span><br><span class="line">a=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-amp-和"><a href="#1-3-amp-和" class="headerlink" title="1.3 &amp;和*"></a>1.3 &amp;和*</h3><p>&amp;为取地址符，*有两种用法，一种是在定义的时候表示定义一个指针类型，一种是通过地址找到对应的值。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//上面的定义方式也可以简写成</span></span><br><span class="line"><span class="keyword">int</span> a=<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span>* p = &amp;a;</span><br><span class="line"></span><br><span class="line">p=p+<span class="number">1</span>;  <span class="comment">//这个时候如果p为2002，那么p+1为2006，因为int类型占了4个字节</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2-结构"><a href="#2-结构" class="headerlink" title="2. 结构"></a>2. 结构</h2><p>struct用于存储一个结构，一个结构里面可以包含有多个信息。</p>
+<h3 id="2-1-结构声明与定义"><a href="#2-1-结构声明与定义" class="headerlink" title="2.1 结构声明与定义"></a>2.1 结构声明与定义</h3><p>声明是告诉编译器如何表示数据，并未让编译器分配空间。在定义的时候，即创建一个结构变量，此时为改模板分配了变量。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种</span></span><br><span class="line"><span class="comment">//先对结构进行声明</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">List</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> *data;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> max;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//再对结构进行定义</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">List</span> <span class="title">array</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//第二种</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">List</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> *data;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> max;</span><br><span class="line">&#125;<span class="built_in">array</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-2-结构的表示方式"><a href="#2-2-结构的表示方式" class="headerlink" title="2.2 结构的表示方式"></a>2.2 结构的表示方式</h3><p>可以用指针访问结构，也可直接用结构的类型访问。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">List</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> *data;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> max;</span><br><span class="line">&#125;*L;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">L-&gt;length <span class="comment">//指针访问结构内数据</span></span><br><span class="line">List.length</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-malloc-和free"><a href="#3-malloc-和free" class="headerlink" title="3. malloc()和free()"></a>3. malloc()和free()</h2><p>内存的分配分为静态分配和动态分配，静态分配即直接分配一段大小固定的连续空间，但是静态分配往往不能满足我们的需求<br>虚拟内存部分是一个很大的模块，我还没有完全搞懂，等复习到操作系统的时候再把这个坑补上<br>malloc是在堆上分配内存，注意：此处的堆不是数据结构中堆，这是虚拟内存中进程内存结构中的一部分。称作堆是因为它是可以让程序员可以调用也可以释放的一堆内存空间，但是如果不能掌握堆的用法，很可能会倒是内存泄漏。堆上的数据是要手动进行是释放，堆上向上增长的。   </p>
+<p>malloc()是在内存不足的时候，调用其函数，有以下集中分配方式：   </p>
+<ol>
+<li>malloc会先从free后的空闲列表中的内存块中找可以分配的内存，在此内存中前面一部分为存储内存块长度，后一部分为调用者可用的内存，此时返回的地址，为调用者可用内存的首地址。</li>
+<li>若空闲类别中的内存块不足够分配内存，则去内存中寻找连续的一段空间，返回值如上。</li>
+</ol>
+<p>malloc()返回类型为void*，即返回分配空间中可用地址的首地址，调用的时候需要一个指针来接收此首地址，才能对申请的空间进行使用。在用完后需要使用free()进行释放，如果在一个作用域内没有使用free()进行释放，但是其指向此空间的指针已经在栈里面释放了，也就是此段内存无法进行访问，也无法释放了。</p>
+<h2 id="4-三种表示数组的方法"><a href="#4-三种表示数组的方法" class="headerlink" title="4.三种表示数组的方法"></a>4.三种表示数组的方法</h2><p>当用malloc()申请了一段内存，<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *a;</span><br><span class="line"><span class="comment">//a指向了分配的内存的首地址,分配了3个int类型连续的内存</span></span><br><span class="line">a = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*<span class="number">3</span>);</span><br><span class="line"><span class="comment">//因为分配的内存是连续的，将分配的内存看作一个数组，a可以直接对此内存进行访问</span></span><br><span class="line">a[<span class="number">0</span>]=<span class="number">2</span>; <span class="comment">//对此段内存的前4个字节进行赋值。</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>，a[<span class="number">0</span>];    <span class="comment">//a[0]=2</span></span><br></pre></td></tr></table></figure></p>
+<p>创建数组的三种方式：</p>
+<ol>
+<li>声明数组时，用常量表达式表示数组的维度，用静态内存或者自动内存创建</li>
+<li>声明变长数组，用变量表达式表示数组的维度，用数组名访问数组元素</li>
+<li>声明指针，调用malloc()，将其返回值赋给指针，使用指针访问数组元素</li>
+</ol>
+<h1 id="二、顺序表"><a href="#二、顺序表" class="headerlink" title="二、顺序表"></a>二、顺序表</h1><p>顺序表有两种存储方式，一种是静态存储，就是直接固定大小<br>还有一种就是动态分配内存。<br>详细代码实现见github仓库  </p>
+<h2 id="定义数据结构"><a href="#定义数据结构" class="headerlink" title="定义数据结构"></a>定义数据结构</h2><p>此数据结构，只需要分配这一个数据结构的空间，在此数据结构中含有一个int类型的数组，使用的时malloc()的调用方式来表示数组。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SeqList</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> *data;  <span class="comment">//定义了一个int类型的数组</span></span><br><span class="line">    <span class="keyword">int</span> Length;</span><br><span class="line">    <span class="keyword">int</span> Max;</span><br><span class="line">&#125;*L;</span><br></pre></td></tr></table></figure></p>
+<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><ol>
+<li><p>基础实现<br>在位置i(i从1开始)插入数据e,则i开始全部数据往后移，再将e插入。其容易出错的地方在于数据往后移的for循环判断，注意数组是从0开始，而i和Length是从1开始，且这个数据后移，需要从最后一位开始往后移，不然会进行覆盖。a[Length]=a[Length-1],下标从Length开始，到i结束循环</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j=L-&gt;Length;j&gt;=i;j--)&#123;</span><br><span class="line">    L-&gt;data[j]=L-&gt;data[j<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：<br>最坏情况：O(n)<br>最好情况:O(1)<br>平均情况：O(n)</p>
+</li>
+<li>高效实现<br>如果在位置i处插入数据e，将a[Length]=a[i-1],即将要插入的地方的数据加到整个数组的末尾，然后空出的此为主放置数据e。<br>时间复杂度：O(1)</li>
+</ol>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><ol>
+<li><p>基础实现<br>基本和插入差不多，只是数据向上移动，同样容易错的地方在于for循环的判断条件，这个时候就要正序的往上移动。最一开始a[i-1]=a[i]到a[length-2]=a[length-1],j从i到j=length-1，所以j=i,j &lt; length,j++,代码实现</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j=i<span class="number">-1</span>;j&lt; L-&gt;Length;j++)&#123;</span><br><span class="line">    L-&gt;data[j<span class="number">-1</span>]=L-&gt;data[j];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 时间复杂度：<br>最坏情况：O(n)<br>最好情况:O(1)<br>平均情况：O(n)</p>
+</li>
+<li>高效实现<br> 如果删除一次，就对数组进行一次移动会造成大量的资源浪费，即可以先将删除的数据记录下来，进行统一删除，这也是JVM算法回收机制的原理。<pre><code>时间复杂度：  
+</code></pre>最坏情况：O(n)<br>最好情况:O(1)<br>平均情况：O(n)</li>
+</ol>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+
+
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/05/12/life/book/test/">
+         →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/mllove" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
