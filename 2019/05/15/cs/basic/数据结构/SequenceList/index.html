@@ -83,9 +83,9 @@
                 
                     <li><a href="/tags/java/" class="animsition-link">java</a></li>
                 
-                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
-                
                     <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                
+                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
                 
                     <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
                 
@@ -211,7 +211,8 @@
 
 
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="一、C语言基础"><a href="#一、C语言基础" class="headerlink" title="一、C语言基础"></a>一、C语言基础</h1><h2 id="1-指针"><a href="#1-指针" class="headerlink" title="1. 指针"></a>1. 指针</h2><h3 id="1-1-存储方式"><a href="#1-1-存储方式" class="headerlink" title="1.1 存储方式"></a>1.1 存储方式</h3><p>在内存中数据由低位到高位进行存储，那么CPU如何对数据进行存取？<br>每一个字节的存储到主存中，都是有一个地址的。<br>定义不同的类型就会分配不同的存储空间，int类型分配4个字节，char类型分配一个字节。<br>计算机的存储方式是两个地址相加而成的，因为计算机中的物理地址为20位，寄存器存放为16位，要用16位的寄存器来表示20位的物理地址，就通过分段的方式，用两个寄存器，其中一个表示段的首地址，将首地址*16(向左移动四位)就可以表示为20位，然后另一个寄存器表示段内的偏移地址，偏移量为从0到2^16.所以数组的开头为0，而不是1，是为了更好的表示偏移量。</p>
+      		<h1 id="一、C语言基础"><a href="#一、C语言基础" class="headerlink" title="一、C语言基础"></a>一、C语言基础</h1><h2 id="1-指针"><a href="#1-指针" class="headerlink" title="1. 指针"></a>1. 指针</h2><h3 id="1-1-存储方式"><a href="#1-1-存储方式" class="headerlink" title="1.1 存储方式"></a>1.1 存储方式</h3><p>在内存中数据由低位到高位进行存储，那么CPU如何对数据进行存取？<br>每一个字节的存储到主存中，都是有一个地址的。<br>定义不同的类型就会分配不同的存储空间，int类型分配4个字节，char类型分配一个字节。<br><img src="http://prdj7tprx.bkt.clouddn.com/sequenceList.png" alt="sequenceList">   </p>
+<p>计算机的存储方式是两个地址相加而成的，因为计算机中的物理地址为20位，寄存器存放为16位，要用16位的寄存器来表示20位的物理地址，就通过分段的方式，用两个寄存器，其中一个表示段的首地址，将首地址*16(向左移动四位)就可以表示为20位，然后另一个寄存器表示段内的偏移地址，偏移量为从0到2^16.所以数组的开头为0，而不是1，是为了更好的表示偏移量。</p>
 <h3 id="1-2-指针存储方式"><a href="#1-2-指针存储方式" class="headerlink" title="1.2 指针存储方式"></a>1.2 指针存储方式</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;<span class="comment">//分配了4个字节的存储空间</span></span><br><span class="line"><span class="keyword">int</span> *p;<span class="comment">//p为指向int类型的指针</span></span><br><span class="line">p=&amp;a;<span class="comment">//p存储了a的首地址，也即p指向了a</span></span><br><span class="line">a=<span class="number">5</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="1-3-amp-和"><a href="#1-3-amp-和" class="headerlink" title="1.3 &amp;和*"></a>1.3 &amp;和*</h3><p>&amp;为取地址符，*有两种用法，一种是在定义的时候表示定义一个指针类型，一种是通过地址找到对应的值。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//上面的定义方式也可以简写成</span></span><br><span class="line"><span class="keyword">int</span> a=<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span>* p = &amp;a;</span><br><span class="line"></span><br><span class="line">p=p+<span class="number">1</span>;  <span class="comment">//这个时候如果p为2002，那么p+1为2006，因为int类型占了4个字节</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="2-结构"><a href="#2-结构" class="headerlink" title="2. 结构"></a>2. 结构</h2><p>struct用于存储一个结构，一个结构里面可以包含有多个信息。</p>
