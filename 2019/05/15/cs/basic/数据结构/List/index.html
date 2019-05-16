@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>链表——单链表、双向链表和循环链表 | Lynette</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Lynette">
+    <meta name="author" content="Lynette">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Lynette" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close"/>
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+        <!-- Dropdown Menu -->
+         
+        <li>
+            <a class="sb-toggle-submenu">Tag<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                    <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
+                
+                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
+                
+                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
+                
+                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                  
+                <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
+                
+                <li><a href="/categories/operate/" class="animsition-link">operate<small>(3)</small></a></li>
+                
+                <li><a href="/categories/project/" class="animsition-link">project<small>(4)</small></a></li>
+                
+                <li><a href="/categories/基础知识/" class="animsition-link">基础知识<small>(2)</small></a></li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+            <ul class="sb-submenu">
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+                <li><a href="" class="animsition-link"></a></li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu secondary">
+        
+        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+    </ul>
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+    <!-- ============================ Header & Logo bar =========================== -->
+
+    <div id="navigation" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <!-- Nav logo -->
+                <div class="logo">
+                    <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                    </a>
+                </div>
+                <!-- // Nav logo -->
+                <!-- Info-bar -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/" class="animsition-link">Lynette</a></li>
+                        <li class="nolink"><span>Always </span>Creative.</li>
+                        
+                        <li><a href="https://github.com/LynetteMao" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li class="nolink"><span>Welcome!</span></li>
+                    </ul>
+                </nav>
+                <!--// Info-bar -->
+            </div>
+            <!-- // .container -->
+            <div class="learnmore sb-toggle-right">More</div>
+            <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+            </button>
+        </div>
+        <!-- // .navbar-inner -->
+    </div>
+
+    <!-- ============================ Header & Logo bar =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-05-14T16:00:00.000Z" itemprop="datePublished">
+          2019-05-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/数据结构/'>数据结构</a>
+    
+    
+</span>
+                <h1>链表——单链表、双向链表和循环链表</h1>
+            </div>
+        </div>
+    
+        
+
+   
+        
+        <div id="toc" class="toc-article">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、链表"><span class="toc-text">一、链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-带头结点的链表"><span class="toc-text">1. 带头结点的链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-注意边界条件处理"><span class="toc-text">2. 注意边界条件处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、单链表"><span class="toc-text">二、单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本操作"><span class="toc-text">1. 基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-合并两个有序链表"><span class="toc-text">3.合并两个有序链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-逆序输出"><span class="toc-text">4.逆序输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-求链表的中间结点"><span class="toc-text">5.求链表的中间结点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-判断回文字符串"><span class="toc-text">6.判断回文字符串</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、循环链表"><span class="toc-text">三、循环链表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、双链表"><span class="toc-text">四、双链表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、静态链表"><span class="toc-text">五、静态链表</span></a></li></ol>
+        </div>
+        
+
+
+        <div class="col-md-8 col-md-offset-2">
+      		<p><img src="http://prdj7tprx.bkt.clouddn.com/ListFra.png" alt="listque"><br>以上为线性表的分类，此次我们来讨论单链表、双链表以及循环链表，难点为指针的使用。  </p>
+<h1 id="一、链表"><a href="#一、链表" class="headerlink" title="一、链表"></a>一、链表</h1><h2 id="1-带头结点的链表"><a href="#1-带头结点的链表" class="headerlink" title="1. 带头结点的链表"></a>1. 带头结点的链表</h2><p>链表由数据域，以及指针域组成。一般是以一个指针指向此链表的头节点，但是由于这样表示的话在写代码的时候进行插入删除等操作的时候要设计的分类，所以一般采用带头结点的链表进行实现，头结点是不存储数据的。</p>
+<h2 id="2-注意边界条件处理"><a href="#2-注意边界条件处理" class="headerlink" title="2. 注意边界条件处理"></a>2. 注意边界条件处理</h2><ol>
+<li>如果链表为空，是否能够正常工作？</li>
+<li>如果链表只包含一个结点，代码能否正常工作？</li>
+<li>如果链表只包含了两个结点，代码能否正常工作？</li>
+<li>代码逻辑在处理头结点和尾结点的时候，能否正常工作？</li>
+</ol>
+<h1 id="二、单链表"><a href="#二、单链表" class="headerlink" title="二、单链表"></a>二、单链表</h1><h2 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h2><p>单链表的基本操作就插入、删除、查找,其中插入与删除的时间复杂度都为O(1),查找的时间复杂度为O(n);<br>单链表是一种动态结构，建立线性表的链式存储结构的过程就是一个动态生成链表的过程。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">List *s;</span><br><span class="line"><span class="comment">//增加一个新的结点</span></span><br><span class="line">s = (List *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(List *));</span><br><span class="line"><span class="comment">//插入,将结点s插入到链表中，分为头插入和尾插入和中间插入，此处为在位置i处插入</span></span><br><span class="line"><span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(L-&gt;next&amp;&amp;j&lt; i)&#123;</span><br><span class="line">    L=L-&gt;next;</span><br><span class="line">    j++;</span><br><span class="line">&#125;</span><br><span class="line">p = L;</span><br><span class="line">s-&gt;next = L-&gt;next;</span><br><span class="line">L-&gt;next=s;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line">L-&gt;next = L-&gt;next-&gt;next;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-合并两个有序链表"><a href="#3-合并两个有序链表" class="headerlink" title="3.合并两个有序链表"></a>3.合并两个有序链表</h2><p>将其中一个链表的头结点作为最后的头节点，对两个列表中的值，依次进行比较，谁小，就把最终结点的下一个指针指向它。最后记得要释放链表b的头结点。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MergeList</span><span class="params">(LinkNode *La,LinkNode *Lb,LinNode *Lc)</span></span>&#123;</span><br><span class="line">    LinkNode *pa = La-&gt;next;</span><br><span class="line">    LinkNode *pb = Lb-&gt;next;</span><br><span class="line">    LinkNode *pc ;</span><br><span class="line">    Lc = La;</span><br><span class="line">    pc = Lc;<span class="comment">//pc一开始指向没有数据的头结点</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(pa&amp;&amp;pb)&#123;</span><br><span class="line">        <span class="keyword">if</span>(pa-&gt;data&lt;= pb-&gt;data)&#123;</span><br><span class="line">            pc-&gt;next = pa;</span><br><span class="line">            pc = pa;</span><br><span class="line">            pa = pa-&gt;next;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pc-&gt;next = pb;</span><br><span class="line">            pc = pb;</span><br><span class="line">            pb = pb-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        pa-&gt;next?pc-&gt;next=pa:pc-&gt;next=pb;</span><br><span class="line">        <span class="built_in">free</span>(Lb);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-逆序输出"><a href="#4-逆序输出" class="headerlink" title="4.逆序输出"></a>4.逆序输出</h2><p>如果用双链表实现逆序输出则会相当容易，按照双链表的思路，则把所有指针反过来即可，但是存在一下几个问题：</p>
+<ol>
+<li>如何将当前指针所指向的结点，指向前一个结点，这就说明要一个指针指向前面的结点。</li>
+<li>当前指针指向前面的结点的时候，是否会找不到后面的结点，则说明，要先找到当前结点的下一个结点，才能断开指向前一个结点。</li>
+<li>是否需要头结点</li>
+<li>边界处理<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//因为没有头节点，头指针指向的结点为逆序后的最后一个结点，此结点的next要为NULL</span></span><br><span class="line">List *pre=<span class="literal">NULL</span>;</span><br><span class="line"><span class="comment">//cur指向头指针</span></span><br><span class="line">List *cur= L;</span><br><span class="line"><span class="keyword">while</span>(cur!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">    <span class="comment">//在断开与后面的连接之前，要先用一个指针指向下一个结点</span></span><br><span class="line">    List *next = cur-&gt;next;</span><br><span class="line">    cur-&gt;next=pre;</span><br><span class="line">    <span class="comment">//全部往后移</span></span><br><span class="line">    pre=cur;</span><br><span class="line">    cur=next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>对边界进行检验，当cur指到最后一位的时候，next为null，将cur-&gt;next=pre,此时完成了全部的逆序，所以要退出循环，pre指向了最后一位，cur赋值为null，边界检查通过。</p>
+<h2 id="5-求链表的中间结点"><a href="#5-求链表的中间结点" class="headerlink" title="5.求链表的中间结点"></a>5.求链表的中间结点</h2><p>快慢指针找链表中点，将其看作速度，速度为2倍，同样的时间，当一个到了，另一个正好在一半的路程上。所以其中一个指针一次往后走一个，另一个一次往后走两个结点。奇数的时候，如果快指针的next为null的时候结束循环，偶数的时候，快指针为null的时候结束循环。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LinkNode * <span class="title">LinkCentre</span><span class="params">(LinkNode *L)</span></span>&#123;</span><br><span class="line">    LinkNode *fast,*slow;</span><br><span class="line">    fast = L-&gt;next;</span><br><span class="line">    slow = L-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(fast&amp;&amp;fast-&gt;next)&#123;</span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-判断回文字符串"><a href="#6-判断回文字符串" class="headerlink" title="6.判断回文字符串"></a>6.判断回文字符串</h2><h1 id="三、循环链表"><a href="#三、循环链表" class="headerlink" title="三、循环链表"></a>三、循环链表</h1><p>循环链表就是单链表的最后一个结点的next不为null，而是指向了头结点。</p>
+<h1 id="四、双链表"><a href="#四、双链表" class="headerlink" title="四、双链表"></a>四、双链表</h1><p>通过牺牲空间来换取时间，通过双链表在许多算法中可以大量的节省时间。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">DulNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    DulNode *pre;</span><br><span class="line">    DulNode *next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h1 id="五、静态链表"><a href="#五、静态链表" class="headerlink" title="五、静态链表"></a>五、静态链表</h1><p>静态链表是将链表用数组进行存放</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+
+
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/05/14/cs/basic/数据结构/SequenceList/">
+        顺序表 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Lynette. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/LynetteMao" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

@@ -81,15 +81,15 @@
                 
                     <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
                 
+                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
+                
                     <li><a href="/tags/java/" class="animsition-link">java</a></li>
                 
                     <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
                 
-                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
                 
                     <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
-                
-                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
                 
             </ul>
         </li>
@@ -105,7 +105,7 @@
                 
                 <li><a href="/categories/project/" class="animsition-link">project<small>(4)</small></a></li>
                 
-                <li><a href="/categories/基础知识/" class="animsition-link">基础知识<small>(1)</small></a></li>
+                <li><a href="/categories/基础知识/" class="animsition-link">基础知识<small>(2)</small></a></li>
                 
             </ul>
         </li>
@@ -218,11 +218,51 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/05/15/cs/basic/数据结构/SequenceList/">顺序表</a></h3>
+                    <h3><a href="/2019/05/15/cs/basic/数据结构/List/">链表——单链表、双向链表和循环链表</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2019-05-14T16:00:00.000Z" itemprop="datePublished">
           2019-05-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/数据结构/'>数据结构</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        以上为线性表的分类，此次我们来讨论单链表、双链表以及循环链表，难点为指针的使用。  
+一、链表1. 带头结点的链表链表由数据域，以及指针域组成。一般是以一个指针指向此链表的头节点，但是由于这样表示的话在写代码的时候进行插入删除等操作的时候要设计的分类，所以一般采用带头结点的链表进行实现，头结点是不存储数据的。
+2. 注意边界条件处理
+如果链表为空，是否能够正常工作？
+如果链表只包含一个结点，代码能否正常工作？
+如果链表只包含了两个结点，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/15/cs/basic/数据结构/List/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/14/cs/basic/数据结构/SequenceList/">顺序表</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-13T16:00:00.000Z" itemprop="datePublished">
+          2019-05-14
       </time>
     
     
@@ -242,7 +282,7 @@
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/05/15/cs/basic/数据结构/SequenceList/">Read More...</a>
+                        <a href="/2019/05/14/cs/basic/数据结构/SequenceList/">Read More...</a>
                     </p>
                     
                 </div>
@@ -542,63 +582,9 @@ shadowsocks.json配置文件如下：
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/29/cs/operate/git服务器搭建/">搭建git服务器</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-29T14:40:47.742Z" itemprop="datePublished">
-          2018-07-29
-      </time>
-    
-    
-    | 
-    <a href='/tags/环境搭建/'>环境搭建</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <ul>
-<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
-<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
-<li><a href="#%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4">搭建步骤</a><ul>
-<li><a href="#%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1">租云服务</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85mysql57">安装mysql5.7</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85ssh">安装<code>ssh</code></a></li>
-<li><a href="#%E5%AE%89%E8%A3%85git">安装<code>git</code></a></li>
-<li><a href="#%E5%AE%89%E8%A3%85gogs">安装<code>gogs</code></a></li>
-<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
-</ul>
-</li>
-<li><a href="#%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91">踩过的坑</a><ul>
-<li><a href="#mysql%E7%89%88%E6%9C%AC">mysql版本</a></li>
-<li><a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98">服务器端口问题</a></li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>一开始是使用github进行远程多人合作，不得不说作为最大的开源社区，在合作这一方面做的真的很好。但是因为接的项目老师是商业版的，无奈只能寻找私人仓库，国内的那几家免费私人仓库合作人数都有限制，就开始琢磨着自己搭建一个git服务器。通过收集资料，发现<code>gitlab</code>配置要求过于高，不过算是github的代替品吧。穷学生还是找自己能租得起的服务器能承受的起的，然后就发现了<code>gogs</code>，但是还没试过合作的功能怎么样。<br>
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/29/cs/operate/git服务器搭建/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
           
-          
+          <a class="pull-right" href="/page/2/">Older Posts →</a>
         </nav>
     </div>
 </section>

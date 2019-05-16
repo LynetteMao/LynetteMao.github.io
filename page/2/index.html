@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2018/9 | Lynette</title>
+  <title>Lynette</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -210,50 +210,71 @@
 <!-- // End height spacing helper -->
 
 <!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
 
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
+        
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/29/cs/operate/git服务器搭建/">搭建git服务器</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-29T14:40:47.742Z" itemprop="datePublished">
+          2018-07-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/环境搭建/'>环境搭建</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <ul>
+<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4">搭建步骤</a><ul>
+<li><a href="#%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1">租云服务</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85mysql57">安装mysql5.7</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85ssh">安装<code>ssh</code></a></li>
+<li><a href="#%E5%AE%89%E8%A3%85git">安装<code>git</code></a></li>
+<li><a href="#%E5%AE%89%E8%A3%85gogs">安装<code>gogs</code></a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91">踩过的坑</a><ul>
+<li><a href="#mysql%E7%89%88%E6%9C%AC">mysql版本</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98">服务器端口问题</a></li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>一开始是使用github进行远程多人合作，不得不说作为最大的开源社区，在合作这一方面做的真的很好。但是因为接的项目老师是商业版的，无奈只能寻找私人仓库，国内的那几家免费私人仓库合作人数都有限制，就开始琢磨着自己搭建一个git服务器。通过收集资料，发现<code>gitlab</code>配置要求过于高，不过算是github的代替品吧。穷学生还是找自己能租得起的服务器能承受的起的，然后就发现了<code>gogs</code>，但是还没试过合作的功能怎么样。<br>
+                      
+                    </p>
                     
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/09/25/cs/project/artmall/authorization/">artmall——authorization</a></h4>
-                            
-                            <p><time datetime="2018-09-25T07:02:20.000Z"><a href="/2018/09/25/cs/project/artmall/authorization/">2018-09-25</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/09/06/cs/project/artmall/artmall-shiro/">artmall:spingboot整合shiro-基本登录实现</a></h4>
-                            
-                            <p><time datetime="2018-09-06T13:40:08.000Z"><a href="/2018/09/06/cs/project/artmall/artmall-shiro/">2018-09-06</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/09/06/cs/project/artmall/artmall-springboot/">artmall:multi module sping boot搭建</a></h4>
-                            
-                            <p><time datetime="2018-09-06T13:22:37.000Z"><a href="/2018/09/06/cs/project/artmall/artmall-springboot/">2018-09-06</a></time></p>
-                        </div>
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/29/cs/operate/git服务器搭建/">Read More...</a>
+                    </p>
                     
                 </div>
-            </div>    
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
         </div>
+        
+        <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/">← Newer Posts</a>
+          
+        </nav>
     </div>
-</section> 
-
+</section>
 <section id="statement">
     <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
         <div class="row">
@@ -261,6 +282,8 @@
         </div>
     </div>
 </section>
+<!-- ============================ END Content =========================== -->
+
       
 <!-- ============================ Footer =========================== -->
 
