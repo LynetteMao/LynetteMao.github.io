@@ -211,7 +211,8 @@
 
 
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><pre><code class="python">r=requests.get(url,verify=<span class="literal">False</span>)
+      		<h1 id="1、BeautifulSoup"><a href="#1、BeautifulSoup" class="headerlink" title="1、BeautifulSoup"></a>1、BeautifulSoup</h1><p><a href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/" target="_blank" rel="noopener">官方文档</a></p>
+<h3 id="1、用法"><a href="#1、用法" class="headerlink" title="1、用法"></a>1、用法</h3><pre><code class="python">r=requests.get(url,verify=<span class="literal">False</span>)
 bsObj =  BeautifulSoup(r)
 print(bsObj)  
 
@@ -219,7 +220,7 @@ print(bsObj)
 gives the error message <span class="string">"TypeError: object of type 'Response' has no len().</span>
 </code></pre>
 <p>requests.get(url)返回的是一个response对象，而BeautifulSoup需要传入的是一个str类型的数据，所以需要把response对象转化为string对象，加上<code>r.text</code>再传入BeautifulSoup(r.text)，且可以指定解析器(lxml、html5lib等，详见官方文档)。<br>要让格式好看，可以加上<code>bsObj.prettify()</code>   </p>
-<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>四大基本对象:<code>Tag\Navigablestring\BeautifulSoup\Comment</code><br>Tag有Name和Attributes两个属性，tag.name获取tag的名称，<br>获取tag的属性：<br>一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:</b></p>
+<h3 id="2、基本语法"><a href="#2、基本语法" class="headerlink" title="2、基本语法"></a>2、基本语法</h3><p>四大基本对象:<code>Tag\Navigablestring\BeautifulSoup\Comment</code><br>Tag有Name和Attributes两个属性，tag.name获取tag的名称，<br>获取tag的属性：<br>一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:</b></p>
 <pre><code class="python">tag[<span class="string">'class'</span>]
 <span class="comment"># u'boldest'</span>
 也可以直接”点”取属性, 比如: .attrs :
@@ -248,7 +249,22 @@ print(tag.get(<span class="string">'class'</span>))
 <span class="comment">#替代其中的字符串  </span>
 tag.string.replace_with(<span class="string">"No longer bold"</span>)
 </code></pre>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><a href="https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md" target="_blank" rel="noopener">正则表达式</a>   </p>
+<h3 id="3、遍历"><a href="#3、遍历" class="headerlink" title="3、遍历"></a>3、遍历</h3><ol>
+<li><p>contents &amp;&amp; children<br> contents和children都能够获取tag下的直接子节点，contents返回所有子节点的列表，children返回所有子节点的迭代器。</p>
+<blockquote>
+<p>迭代器：不预先分配好内存进行存储，存放的是算法，在调用next()才计算出下一个数据。所以children读值需要<code>for i in children</code>    </p>
+</blockquote>
+</li>
+<li><p>strings &amp;&amp; stripped_strings   </p>
+<ul>
+<li>string：获取某个标签下的非标签字符串。返回来的是个字符串。如果这个标签下有多行字符，那么就不能获取到了。</li>
+<li>strings：获取某个标签下的子孙非标签字符串。返回来的是个生成器。</li>
+<li>stripped_strings：获取某个标签下的子孙非标签字符串，会去掉空白字符。返回来的是个生成器。</li>
+<li>get_text：获取某个标签下的子孙非标签字符串，以普通字符串形式返回</li>
+</ul>
+</li>
+</ol>
+<h1 id="2、正则表达式"><a href="#2、正则表达式" class="headerlink" title="2、正则表达式"></a>2、正则表达式</h1><p><a href="https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md" target="_blank" rel="noopener">正则表达式</a>   </p>
 <h2 id="零宽度断言"><a href="#零宽度断言" class="headerlink" title="零宽度断言"></a>零宽度断言</h2><p>零宽度断言指的是不占有内存的匹配，即只匹配位置。<br>作用：匹配具体格式的位置，一般前后会加上匹配的正则表达式，输入的断言不进行匹配。通俗来说，就是匹配特定格式前或者后的字符串。<br><code>?=</code>和<code>?!</code>相对，<code>?=</code>匹配某格式前面的内容，<code>?!</code>除某格式外前面的内容。<br><code>?&lt;=</code>和<code>?&lt;!</code>相对，匹配某格式后面的内容。     </p>
 <h2 id="贪婪匹配和惰性匹配"><a href="#贪婪匹配和惰性匹配" class="headerlink" title="贪婪匹配和惰性匹配"></a>贪婪匹配和惰性匹配</h2><p>正则表达式默认使用贪婪匹配，即会尽可能多的匹配字符，就会出现很多不需要的字符。<br>加上<code>?</code>进行惰性匹配，会在匹配到第一个符合条件的字符就停止匹配。   </p>
 <h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p><code>()</code>表示捕获组，会对每一个捕获组分配一个编号，0表示整个获取的字符串，1表示第一个捕获组，以此类推。可以通过反向引用，对分组已捕获的字符串进行引用。</p>
