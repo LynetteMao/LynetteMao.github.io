@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: artmall;问题解决 | Lynette</title>
+  <title>字符匹配——day3 | Lynette</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -184,69 +184,143 @@
     </div>
 
     <!-- ============================ Header & Logo bar =========================== -->
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>Lynette</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/23/cs/project/artmall/springboot-static-resource/">spring boot打包为jar包部署关于静态资源的处理</a></h4>
-                            
-                            <p><time datetime="2018-10-23T10:35:07.000Z"><a href="/2018/10/23/cs/project/artmall/springboot-static-resource/">2018-10-23</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-12-30T16:00:00.000Z" itemprop="datePublished">
+          2019-12-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/python/'>python</a>
+    
+    
+</span>
+                <h1>字符匹配——day3</h1>
+            </div>
         </div>
-    </div>
-</section> 
+    
+        
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+   
+        
+
+
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h2><h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><pre><code class="python">r=requests.get(url,verify=<span class="literal">False</span>)
+bsObj =  BeautifulSoup(r)
+print(bsObj)  
+
+<span class="comment">##报错   </span>
+gives the error message <span class="string">"TypeError: object of type 'Response' has no len().</span>
+</code></pre>
+<p>requests.get(url)返回的是一个response对象，而BeautifulSoup需要传入的是一个str类型的数据，所以需要把response对象转化为string对象，加上<code>r.text</code>再传入BeautifulSoup(r.text)，且可以指定解析器(lxml、html5lib等，详见官方文档)。<br>要让格式好看，可以加上<code>bsObj.prettify()</code>   </p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>四大基本对象:<code>Tag\Navigablestring\BeautifulSoup\Comment</code><br>Tag有Name和Attributes两个属性，tag.name获取tag的名称，<br>获取tag的属性：<br>一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:</b></p>
+<pre><code class="python">tag[<span class="string">'class'</span>]
+<span class="comment"># u'boldest'</span>
+也可以直接”点”取属性, 比如: .attrs :
+
+tag.attrs
+<span class="comment"># {u'class': u'boldest'}</span>
+tag的属性可以被添加,删除或修改. 再说一次, tag的属性操作方法与字典一样
+
+tag[<span class="string">'class'</span>] = <span class="string">'verybold'</span>
+tag[<span class="string">'id'</span>] = <span class="number">1</span>
+tag
+<span class="comment"># &lt;blockquote class="verybold" id="1"&gt;Extremely bold&lt;/blockquote&gt;</span>
+
+<span class="keyword">del</span> tag[<span class="string">'class'</span>]
+<span class="keyword">del</span> tag[<span class="string">'id'</span>]
+tag
+<span class="comment"># &lt;blockquote&gt;Extremely bold&lt;/blockquote&gt;</span>
+
+tag[<span class="string">'class'</span>]
+<span class="comment"># KeyError: 'class'</span>
+print(tag.get(<span class="string">'class'</span>))
+<span class="comment"># None</span>
+</code></pre>
+<p>获取tag的字符串，其type是<code>NavigableStirng</code>对象的，此对象是继承了<code>String</code>类，其用法其实差不多。</p>
+<pre><code class="python">unicode_string = unicode(tag.string)    
+<span class="comment">#替代其中的字符串  </span>
+tag.string.replace_with(<span class="string">"No longer bold"</span>)
+</code></pre>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><a href="https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md" target="_blank" rel="noopener">正则表达式</a>   </p>
+<h2 id="零宽度断言"><a href="#零宽度断言" class="headerlink" title="零宽度断言"></a>零宽度断言</h2><p>零宽度断言指的是不占有内存的匹配，即只匹配位置。<br>作用：匹配具体格式的位置，一般前后会加上匹配的正则表达式，输入的断言不进行匹配。通俗来说，就是匹配特定格式前或者后的字符串。<br><code>?=</code>和<code>?!</code>相对，<code>?=</code>匹配某格式前面的内容，<code>?!</code>除某格式外前面的内容。<br><code>?&lt;=</code>和<code>?&lt;!</code>相对，匹配某格式后面的内容。     </p>
+<h2 id="贪婪匹配和惰性匹配"><a href="#贪婪匹配和惰性匹配" class="headerlink" title="贪婪匹配和惰性匹配"></a>贪婪匹配和惰性匹配</h2><p>正则表达式默认使用贪婪匹配，即会尽可能多的匹配字符，就会出现很多不需要的字符。<br>加上<code>?</code>进行惰性匹配，会在匹配到第一个符合条件的字符就停止匹配。   </p>
+<h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p><code>()</code>表示捕获组，会对每一个捕获组分配一个编号，0表示整个获取的字符串，1表示第一个捕获组，以此类推。可以通过反向引用，对分组已捕获的字符串进行引用。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+
+
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/12/30/cs/dataAnalyse/request库/">
+        requests库——day2 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
