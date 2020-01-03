@@ -83,15 +83,15 @@
                 
                     <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
                 
-                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
-                
                     <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
-                
-                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
                 
                     <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
                 
                     <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
+                
+                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                
+                    <li><a href="/tags/java/" class="animsition-link">java</a></li>
                 
             </ul>
         </li>
@@ -103,7 +103,7 @@
                   
                 <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
                 
-                <li><a href="/categories/data-analysis/" class="animsition-link">data analysis<small>(4)</small></a></li>
+                <li><a href="/categories/data-analysis/" class="animsition-link">data analysis<small>(6)</small></a></li>
                 
                 <li><a href="/categories/operate/" class="animsition-link">operate<small>(2)</small></a></li>
                 
@@ -219,7 +219,7 @@ print(bsObj)
 <span class="comment">##报错   </span>
 gives the error message <span class="string">"TypeError: object of type 'Response' has no len().</span>
 </code></pre>
-<p>requests.get(url)返回的是一个response对象，而BeautifulSoup需要传入的是一个str类型的数据，所以需要把response对象转化为string对象，加上<code>r.text</code>再传入BeautifulSoup(r.text)，且可以指定解析器(lxml、html5lib等，详见官方文档)。<br>要让格式好看，可以加上<code>bsObj.prettify()</code>   </p>
+<p>requests.get(url)返回的是一个response对象，而BeautifulSoup需要传入的是一个str类型的数据，所以需要把response对象转化为string对象，加上<code>r.text</code>再传入<code>BeautifulSoup(r.text,&quot;html.parser&quot;)</code>，且可以指定解析器(lxml、html5lib等，详见官方文档)。<br>要让格式好看，可以加上<code>bsObj.prettify()</code>   </p>
 <h3 id="2、基本语法"><a href="#2、基本语法" class="headerlink" title="2、基本语法"></a>2、基本语法</h3><p>四大基本对象:<code>Tag\Navigablestring\BeautifulSoup\Comment</code><br>Tag有Name和Attributes两个属性，tag.name获取tag的名称，<br>获取tag的属性：<br>一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:</b></p>
 <pre><code class="python">tag[<span class="string">'class'</span>]
 <span class="comment"># u'boldest'</span>
@@ -250,10 +250,15 @@ print(tag.get(<span class="string">'class'</span>))
 tag.string.replace_with(<span class="string">"No longer bold"</span>)
 </code></pre>
 <h3 id="3、遍历"><a href="#3、遍历" class="headerlink" title="3、遍历"></a>3、遍历</h3><ol>
-<li><p>contents &amp;&amp; children<br> contents和children都能够获取tag下的直接子节点，contents返回所有子节点的列表，children返回所有子节点的迭代器。</p>
-<blockquote>
+<li><p>contents &amp;&amp; children   </p>
+<ul>
+<li>contents和children都能够获取tag下的直接子节点，contents返回所有子节点的列表，children返回所有子节点的迭代器。   </li>
+<li>子标签就是父标签的下一级，而后代标签是指一个父标签的所有级别的标签。BeautifulSoup处理的是当前标签的后代标签  </li>
+<li>处理兄弟标签<code>next_siblings()</code><blockquote>
 <p>迭代器：不预先分配好内存进行存储，存放的是算法，在调用next()才计算出下一个数据。所以children读值需要<code>for i in children</code>    </p>
 </blockquote>
+</li>
+</ul>
 </li>
 <li><p>strings &amp;&amp; stripped_strings   </p>
 <ul>
@@ -275,6 +280,10 @@ tag.string.replace_with(<span class="string">"No longer bold"</span>)
 
 
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/01/02/cs/dataAnalyse/collection/" style="float: left;">
+        ← 开始采集——day4
+    </a>
     
     
     <a class="pull-right" href="/2019/12/30/cs/dataAnalyse/request库/">
