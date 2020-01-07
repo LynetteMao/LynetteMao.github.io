@@ -83,15 +83,15 @@
                 
                     <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
                 
-                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
-                
                     <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
                 
                     <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
                 
-                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
                 
                     <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
                 
             </ul>
         </li>
@@ -103,7 +103,7 @@
                   
                 <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
                 
-                <li><a href="/categories/data-analysis/" class="animsition-link">data analysis<small>(6)</small></a></li>
+                <li><a href="/categories/data-analysis/" class="animsition-link">data analysis<small>(7)</small></a></li>
                 
                 <li><a href="/categories/operate/" class="animsition-link">operate<small>(2)</small></a></li>
                 
@@ -218,6 +218,46 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/23/cs/project/artmall/springboot-static-resource/">spring boot打包为jar包部署关于静态资源的处理</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-23T10:35:07.000Z" itemprop="datePublished">
+          2018-10-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/artmall-问题解决/'>artmall;问题解决</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        问题描述spring boot打包为jar包，部署至linux服务器，自动创建了一个和jar包同级的image文件用来存放上传的图片。
+图片和文件可以上传至此文件夹，但是当前端调用API获取到要展示图片的url时，却通过这个url无法获取到图片，一开始是被拦截下来，没有权限，当我对权限进行开放后，显示的404.
+基础知识
+静态资源处理
+
+早期的spring mvc对静态资源的请求需要在DispatcherServlet的请求映射中，往往
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/23/cs/project/artmall/springboot-static-resource/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">

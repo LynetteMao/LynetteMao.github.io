@@ -83,15 +83,15 @@
                 
                     <li><a href="/tags/环境搭建/" class="animsition-link">环境搭建</a></li>
                 
-                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
-                
                     <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
                 
                     <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
                 
-                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                    <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
                 
                     <li><a href="/tags/java/" class="animsition-link">java</a></li>
+                
+                    <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
                 
             </ul>
         </li>
@@ -103,7 +103,7 @@
                   
                 <li><a href="/categories/basic/" class="animsition-link">basic<small>(1)</small></a></li>
                 
-                <li><a href="/categories/data-analysis/" class="animsition-link">data analysis<small>(6)</small></a></li>
+                <li><a href="/categories/data-analysis/" class="animsition-link">data analysis<small>(7)</small></a></li>
                 
                 <li><a href="/categories/operate/" class="animsition-link">operate<small>(2)</small></a></li>
                 
@@ -218,6 +218,46 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/01/07/cs/dataAnalyse/多线程爬虫/">多线程爬虫——day5</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-01-06T16:00:00.000Z" itemprop="datePublished">
+          2020-01-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/python/'>python</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        进程与线程一个进程可以有多个线程，线程是程序运行的最小单位。
+单线程和多线程
+文件名不可与要引入的包名一致
+多线程相当于多找了几个人一起完成任务，有助于提高效率   
+
+如何创建一个基本的多线程：使用threading模块下的Thread类即可创建一个线程。这个类有一个target参数，需要指定一个函数，那么以后这个线程执行的时候，就会执行这个函数的代码。需要让线程执行，必须要用star()方法示例代码如下：12345678910111
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/01/07/cs/dataAnalyse/多线程爬虫/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -561,46 +601,6 @@ urlopen 创建一个表示远程url的类文件对象，然后像本地文件一
                     
                     <p class="pull-right readMore">
                         <a href="/2019/05/14/cs/basic/数据结构/SequenceList/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/23/cs/project/artmall/springboot-static-resource/">spring boot打包为jar包部署关于静态资源的处理</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-23T10:35:07.000Z" itemprop="datePublished">
-          2018-10-23
-      </time>
-    
-    
-    | 
-    <a href='/tags/artmall-问题解决/'>artmall;问题解决</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        问题描述spring boot打包为jar包，部署至linux服务器，自动创建了一个和jar包同级的image文件用来存放上传的图片。
-图片和文件可以上传至此文件夹，但是当前端调用API获取到要展示图片的url时，却通过这个url无法获取到图片，一开始是被拦截下来，没有权限，当我对权限进行开放后，显示的404.
-基础知识
-静态资源处理
-
-早期的spring mvc对静态资源的请求需要在DispatcherServlet的请求映射中，往往
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/23/cs/project/artmall/springboot-static-resource/">Read More...</a>
                     </p>
                     
                 </div>
