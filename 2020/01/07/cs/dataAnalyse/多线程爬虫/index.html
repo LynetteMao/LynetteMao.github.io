@@ -85,13 +85,13 @@
                 
                     <li><a href="/tags/数据结构/" class="animsition-link">数据结构</a></li>
                 
-                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
-                
-                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
-                
                     <li><a href="/tags/java/" class="animsition-link">java</a></li>
                 
                     <li><a href="/tags/6-828-环境搭建/" class="animsition-link">6.828;环境搭建</a></li>
+                
+                    <li><a href="/tags/artmall/" class="animsition-link">artmall</a></li>
+                
+                    <li><a href="/tags/artmall-问题解决/" class="animsition-link">artmall;问题解决</a></li>
                 
             </ul>
         </li>
@@ -249,7 +249,9 @@
 <li>查看源代码中没有壁纸的数据，说明是ajax请求，或者是js，后期动态加载的，就不能直接爬取界面，而要去查看请求</li>
 <li>来到<code>network</code>捕获请求，找到请求以及返回的json文件</li>
 <li>其中的链接是通过编码后的，要访问需要进行解码,分析url，得到真实的高清壁纸的图片</li>
-<li>对返回的json文件进行分析，发现图片的url在返回的json中的<code>List</code>里的<code>sProdImgNo</code><h3 id="二、实现图片下载"><a href="#二、实现图片下载" class="headerlink" title="二、实现图片下载"></a>二、实现图片下载</h3></li>
+<li>对返回的json文件进行分析，发现图片的url在返回的json中的<code>List</code>里的<code>sProdImgNo</code>    </li>
+</ol>
+<h3 id="二、实现图片下载"><a href="#二、实现图片下载" class="headerlink" title="二、实现图片下载"></a>二、实现图片下载</h3><ol>
 <li><p>发送请求，获取返回的json</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">header = &#123;</span><br><span class="line">    <span class="string">'user - agent'</span>: <span class="string">'Mozilla / 5.0(Windows NT 10.0;Win64;x64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 79.0.3945.88Safari / 537.36'</span></span><br><span class="line">    , <span class="string">'referer'</span>: <span class="string">'https://pvp.qq.com/web201605/wallpaper.shtml'</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">"网址"</span></span><br><span class="line">re = request.get(url,headers = header)</span><br><span class="line">result = re.json()</span><br></pre></td></tr></table></figure>
 </li>
